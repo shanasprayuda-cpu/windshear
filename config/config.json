@@ -1,0 +1,9 @@
+{
+  "data_path": "../stageD1_data/F1",
+  "stageC_path": "../stageC",
+  "fold": 2,
+  "epochs": 50,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "seed": 2026
+}
