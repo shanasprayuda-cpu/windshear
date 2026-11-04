@@ -1,0 +1,124 @@
+# Windshear / IJIES — public reproducibility repository
+# Purpose: keep source code, documentation, approved sensor geometry,
+# configuration, synthetic examples, and aggregate results versioned.
+# NOTE: .gitignore applies only to UNTRACKED files. Audit files already pushed.
+
+# 1. Python bytecode, caches, and test tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.ipynb_checkpoints/
+
+# 2. Virtual environments and local development tools
+.venv/
+venv/
+env/
+ENV/
+.conda/
+conda-env/
+.python-version
+.vscode/
+.idea/
+*.code-workspace
+
+# 3. Credentials / private settings (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+id_ed25519*
+credentials.json
+service-account*.json
+service_account*.json
+secrets.json
+
+# 4. Private LLWAS observations and derived high-volume datasets
+# These are at repository root; do NOT ignore /data/ as it holds Python code.
+/stageA_gap5/
+/stageB_uv/
+/stageB2_physics/
+/stageC/
+/external_test_2025/
+/data/raw/
+/data/private/
+/data/processed/
+/data/interim/
+/data/external/
+/data/datasets/
+/data/inputs/
+
+# Retain the two already-public, lightweight Stage D1 export audit JSONs.
+# All other Stage D1 arrays/labels are excluded.
+/stageD1_data/*
+!/stageD1_data/F1_external/
+/stageD1_data/F1_external/*
+!/stageD1_data/F1_external/metadata.json
+!/stageD1_data/F1_external/export_audit.json
+
+# 5. Checkpoints, serialized tensors, and private per-window predictions
+/checkpoints/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.arrow
+*.joblib
+*.pickle
+*.pkl
+
+# 6. Generated local logs and experimental outputs
+/logs/
+/runs/
+/wandb/
+/mlruns/
+/tensorboard/
+/tmp/
+/temp/
+/cache/
+/outputs/
+*.log
+*.tmp
+*.bak
+
+# 7. System files, editors and large archives
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.swp
+*.swo
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# INTENTIONALLY PUBLISHED / NOT IGNORED:
+#   /README.md, /docs/, /config/, /models/*.py, /training/, /evaluation/
+#   /scripts/, /tests/, /examples/, /results_summary/*.csv
+#   /supplementary_for_owner_review/S1_45_predictor_definitions.csv
+# The owner confirmed permission to publish LLWAS sensor geometry.
+# Existing checkpoint files still require a separate authorization decision.
