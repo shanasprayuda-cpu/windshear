@@ -1,0 +1,82 @@
+{
+  "provenance": "Values transcribed from actual Stage D1 final focal code and revised IJIES manuscript; versions not pinned",
+  "study": {
+    "task": "Recorded LLWAS operational runway-alert state (WSA/MBA)",
+    "development_start": "2023-01-01",
+    "development_end": "2024-12-31",
+    "external_start": "2025-01-01",
+    "external_end": "2025-03-27",
+    "timezone": "UTC",
+    "n_sensors": 10,
+    "features_F1": 20,
+    "lookback_minutes": 60,
+    "horizons_minutes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "development_windows": 847513,
+    "external_windows": 70810,
+    "validation_folds": 5,
+    "purge_anchor_minutes": 69
+  },
+  "selected_model": {
+    "name_in_code": "TCNBiLSTM",
+    "accurate_description": "Conv1D–BiLSTM, not dilated-residual TCN",
+    "parameter_count": 41994,
+    "conv_channels": 64,
+    "conv_kernel_size": 3,
+    "bilstm_hidden_per_direction": 32,
+    "bilstm_num_layers": 1,
+    "dropout_configured": 0.25,
+    "dropout_effective_in_single_lstm_layer": false,
+    "head_outputs": 10
+  },
+  "final_focal_training": {
+    "seed": 2026,
+    "epochs": 50,
+    "checkpoint": "last_epoch",
+    "batch_size": 128,
+    "lr": 0.00036954127204552557,
+    "weight_decay": 4.98413619067967e-05,
+    "optimizer": "AdamW",
+    "lr_scheduler": null,
+    "max_grad_norm": 1.0,
+    "loss": "unweighted focal",
+    "focal_alpha": 0.6,
+    "focal_gamma": 2.0,
+    "mixed_precision_cuda": true,
+    "feature_standardization": false
+  },
+  "threshold_selection": {
+    "data": "2023-2024 pooled validation OOF",
+    "objective": "max CSI",
+    "tie_break": [
+      "max POD",
+      "min FAR"
+    ],
+    "thresholds_h1_to_h10": [
+      0.363,
+      0.317,
+      0.422,
+      0.363,
+      0.295,
+      0.274,
+      0.31,
+      0.223,
+      0.252,
+      0.231
+    ]
+  },
+  "limitations": [
+    "Original external 2025 period inspected during broader exploratory research",
+    "Raw per-minute operational data and full artifacts may not be publicly released"
+  ]
+}

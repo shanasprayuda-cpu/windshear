@@ -1,0 +1,4 @@
+Restriction,Mean AUPRC,Mean CSI,Mean POD,Mean FAR
+0 minutes,0.3990,0.2672,0.4335,0.6039
+2 minutes,0.3715,0.2644,0.5143,0.6585
+5 minutes,0.4397,0.3012,0.5903,0.6270

@@ -1,0 +1,8 @@
+# Direct libraries observed in the provided Stage D1 and reviewer V3 scripts.
+# NOT a pinned reproduction environment; record `python -m pip freeze` from
+# the original windshear_gpu setup before claiming environment parity.
+numpy
+pandas
+scikit-learn
+torch
+optuna

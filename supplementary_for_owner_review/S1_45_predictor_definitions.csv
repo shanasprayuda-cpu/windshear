@@ -1,0 +1,46 @@
+set_introduced,index_in_F3_1based,feature_name,formula,unit,geometry
+F1,1,A2_u_ms,minute-mean horizontal velocity component,m/s,A2
+F1,2,A2_v_ms,minute-mean horizontal velocity component,m/s,A2
+F1,3,A3_u_ms,minute-mean horizontal velocity component,m/s,A3
+F1,4,A3_v_ms,minute-mean horizontal velocity component,m/s,A3
+F1,5,A4_u_ms,minute-mean horizontal velocity component,m/s,A4
+F1,6,A4_v_ms,minute-mean horizontal velocity component,m/s,A4
+F1,7,A5_u_ms,minute-mean horizontal velocity component,m/s,A5
+F1,8,A5_v_ms,minute-mean horizontal velocity component,m/s,A5
+F1,9,A6_u_ms,minute-mean horizontal velocity component,m/s,A6
+F1,10,A6_v_ms,minute-mean horizontal velocity component,m/s,A6
+F1,11,B2_u_ms,minute-mean horizontal velocity component,m/s,B2
+F1,12,B2_v_ms,minute-mean horizontal velocity component,m/s,B2
+F1,13,B3_u_ms,minute-mean horizontal velocity component,m/s,B3
+F1,14,B3_v_ms,minute-mean horizontal velocity component,m/s,B3
+F1,15,B4_u_ms,minute-mean horizontal velocity component,m/s,B4
+F1,16,B4_v_ms,minute-mean horizontal velocity component,m/s,B4
+F1,17,B5_u_ms,minute-mean horizontal velocity component,m/s,B5
+F1,18,B5_v_ms,minute-mean horizontal velocity component,m/s,B5
+F1,19,B6_u_ms,minute-mean horizontal velocity component,m/s,B6
+F1,20,B6_v_ms,minute-mean horizontal velocity component,m/s,B6
+F2,21,shear_E01_A2_A3_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A2-A3 distance=1893.130m
+F2,22,shear_E02_A3_A4_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A3-A4 distance=1979.009m
+F2,23,shear_E03_A4_A5_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A4-A5 distance=1962.099m
+F2,24,shear_E04_A5_A6_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A5-A6 distance=2058.808m
+F2,25,shear_E05_B2_B3_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B2-B3 distance=1980.648m
+F2,26,shear_E06_B3_B4_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B3-B4 distance=1968.827m
+F2,27,shear_E07_B4_B5_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B4-B5 distance=2076.799m
+F2,28,shear_E08_B5_B6_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B5-B6 distance=1931.779m
+F2,29,shear_E09_A2_B2_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A2-B2 distance=1788.129m
+F2,30,shear_E10_A3_B3_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A3-B3 distance=1830.999m
+F2,31,shear_E11_A4_B4_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A4-B4 distance=1883.177m
+F2,32,shear_E12_A5_B5_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A5-B5 distance=2139.945m
+F2,33,shear_E13_A6_B6_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A6-B6 distance=1516.649m
+F2,34,shear_E14_B2_A3_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B2-A3 distance=2511.658m
+F2,35,shear_E15_A3_B4_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A3-B4 distance=2694.789m
+F2,36,shear_E16_A4_B5_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,A4-B5 distance=2822.858m
+F2,37,shear_E17_B5_A6_s1,sqrt((u_j-u_i)^2+(v_j-v_i)^2)/distance_ij_m,s^-1,B5-A6 distance=2665.263m
+F3,38,div_T01_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A2,B2,A3 area=1688446.079m2"
+F3,39,div_T02_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A3,B2,B3 area=1797090.976m2"
+F3,40,div_T03_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A3,B4,A4 area=1862734.187m2"
+F3,41,div_T04_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A3,B3,B4 area=1802441.352m2"
+F3,42,div_T05_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A4,B5,A5 area=2096230.558m2"
+F3,43,div_T06_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A4,B4,B5 area=1955299.746m2"
+F3,44,div_T07_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A5,B5,A6 area=2160768.585m2"
+F3,45,div_T08_s1,(1/area_m2)*sum_CCW_edges(uavg*dy-vavg*dx),s^-1,"A6,B5,B6 area=1440209.515m2"

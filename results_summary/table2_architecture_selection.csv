@@ -1,0 +1,6 @@
+Architecture,Best trial,Mean AUPRC,Fold SD
+TCN–BiLSTM,26,0.5332,0.1233
+TCN–Transformer,14,0.5188,0.1406
+Transformer,28,0.4833,0.1723
+BiLSTM,28,0.4704,0.2321
+TCN,9,0.1139,0.1029

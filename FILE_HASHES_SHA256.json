@@ -1,0 +1,180 @@
+{
+  "scope": "Generated GitHub overlay files only (no original experiment dataset or source provenance)",
+  "files": [
+    {
+      "relative_path": ".gitignore",
+      "size_bytes": 697,
+      "sha256": "889e033334fa7faf4458cee32c2e1cb0b7ef4eb3ffb9287f21cca9bacb19bd34"
+    },
+    {
+      "relative_path": "README.md",
+      "size_bytes": 6171,
+      "sha256": "81bcc53ae8c6ee2265a76e3b7f0d5558a0ee1fa852d1576d60115883744dc730"
+    },
+    {
+      "relative_path": "config/experiment_registry.json",
+      "size_bytes": 2062,
+      "sha256": "9877450a18ec52610364e4560f01b8331ebbc5b6423688907538d07152c8603b"
+    },
+    {
+      "relative_path": "config/stage_d1_final_focal.json",
+      "size_bytes": 2048,
+      "sha256": "4d6cd061029280f546e7bc2dbbe4b0e9963b375c0cbe6a3bacb1e2406f62a9de"
+    },
+    {
+      "relative_path": "docs/ARTIFACT_INVENTORY.md",
+      "size_bytes": 1768,
+      "sha256": "894e79ada283a640da694355594f4f6e8b9fb7b284e3960bd0708df8619aefa8"
+    },
+    {
+      "relative_path": "docs/DATA_ACCESS.md",
+      "size_bytes": 955,
+      "sha256": "baf1ad942b062ffbccf33b3bc125195139cdbd35e0c3c2d3c982ce8aea72717e"
+    },
+    {
+      "relative_path": "docs/EXISTING_CODE_MERGE_NOTE.md",
+      "size_bytes": 742,
+      "sha256": "13dc7b8abadbe47053a72a44c510c6de5ac933766a50ad7db1d7c0a404168252"
+    },
+    {
+      "relative_path": "docs/EXPERIMENT_RUNBOOK_WINDOWS.md",
+      "size_bytes": 4833,
+      "sha256": "cfe2e501f878f6b95bed4046759b1c701a0a49a7573db4fa4a39a102d2ebc577"
+    },
+    {
+      "relative_path": "docs/RELEASE_CHECKLIST.md",
+      "size_bytes": 1621,
+      "sha256": "4ccff573a98062c3699787d6b2c285d9cff2d8cfc42a5a52bc8f52f04e15c35c"
+    },
+    {
+      "relative_path": "docs/REPRODUCIBILITY.md",
+      "size_bytes": 2202,
+      "sha256": "1a34c03f3e8d2b2b9f3b07c79f7b954b8b00344048d4f3d298eb5ec9aa5641d7"
+    },
+    {
+      "relative_path": "docs/RESULTS_GUIDE.md",
+      "size_bytes": 1840,
+      "sha256": "12a513e2770e9dce6ce65d70d6a82602c479643e9c3835c92d8893bf92bc5a27"
+    },
+    {
+      "relative_path": "docs/REVIEWER_TRACEABILITY.md",
+      "size_bytes": 2250,
+      "sha256": "67b9c3ece8ed183a6866fee636ac32a74674fe7c303b43a3597463c0777d4cec"
+    },
+    {
+      "relative_path": "docs/UPLOAD_GUIDE.md",
+      "size_bytes": 2416,
+      "sha256": "a29bc2c09f84b9fc1eb41655cff5e09e40e9219965cc244b6f540d960deceff4"
+    },
+    {
+      "relative_path": "environment.example.yml",
+      "size_bytes": 367,
+      "sha256": "9ebf2c272f0f087ea914190973ff9577122d5786ce5b21c004536d77bc8ab2c7"
+    },
+    {
+      "relative_path": "examples/generate_synthetic_llwas.py",
+      "size_bytes": 2260,
+      "sha256": "8f966bf6e4d5fec8ae86febe974baabc1e38bde8dca4fa94f66da0b6488c99cb"
+    },
+    {
+      "relative_path": "models/tcn_bilstm.py",
+      "size_bytes": 1480,
+      "sha256": "e1c5e27e489447426f55cfde811c965f6fde6f3286dbd396455859fd13649c61"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "size_bytes": 264,
+      "sha256": "a3fbe0623232ef457b8cf89d361b8d188fdfd1b0a2026056b5345515277c9f34"
+    },
+    {
+      "relative_path": "results_summary/external_all_metrics.csv",
+      "size_bytes": 9194,
+      "sha256": "af3dc6a6e3e5e580173186817a237cc83fe2bf819cb8e6b84738164308e29a90"
+    },
+    {
+      "relative_path": "results_summary/oof_summary.csv",
+      "size_bytes": 123,
+      "sha256": "23465cf8a16d1d91af719bc07bb12442667cbdb8bd9b2a2d310f156774b0121a"
+    },
+    {
+      "relative_path": "results_summary/table1_chronological_folds.csv",
+      "size_bytes": 248,
+      "sha256": "6a7253595e1a4bea4acf40e3414d5bd9ba1af80c674ef05615dd0f2e9cb5fcf6"
+    },
+    {
+      "relative_path": "results_summary/table2_architecture_selection.csv",
+      "size_bytes": 187,
+      "sha256": "ea91de6cc8357bcf7e5ed3a2cc53445fcf99978bcd7edc35b1e040d9e0693b05"
+    },
+    {
+      "relative_path": "results_summary/table3_feature_representations.csv",
+      "size_bytes": 207,
+      "sha256": "bcf1056e4a71c97ddfb27884cc1690921de9c1fe243e96aabdf180ab3f8a8b87"
+    },
+    {
+      "relative_path": "results_summary/table4_imbalance_losses.csv",
+      "size_bytes": 226,
+      "sha256": "168c543202aa7037135d4862423600acb8157417c5806e9957a2244da3775765"
+    },
+    {
+      "relative_path": "results_summary/table5_monthly_2025.csv",
+      "size_bytes": 251,
+      "sha256": "016b9b0e6793eee9d5d8b5451ea39eb8f42aaa8ac13cc0ba1900ee4a2121ba75"
+    },
+    {
+      "relative_path": "results_summary/table6_sensor_imputation.csv",
+      "size_bytes": 151,
+      "sha256": "7ceeb2a7857349e490c122186b3144aca7e2440caa411bc7ad0d2fac622789a5"
+    },
+    {
+      "relative_path": "results_summary/table7_exposure_exclusion_deltas.csv",
+      "size_bytes": 356,
+      "sha256": "f5e93667e2d9449cd9a1776ec1fb8dd8c6363b6e46cdf022cf34b1a44e65f0e4"
+    },
+    {
+      "relative_path": "results_summary/table8_nested_imputation_common_anchors.csv",
+      "size_bytes": 168,
+      "sha256": "9d7c56807fc7d6d8f62a600a06981c8dd42d6e8bedc057223c0fd1a52c31e669"
+    },
+    {
+      "relative_path": "results_summary/table9_component_ablation.csv",
+      "size_bytes": 239,
+      "sha256": "7764bc4ca3729a64c1c3b0dccd663304bd27b6a567a8d7b818eb285d4f3db444"
+    },
+    {
+      "relative_path": "scripts/check_aggregate_metrics.py",
+      "size_bytes": 2842,
+      "sha256": "c1089ce3533a156c9af733d6b98aaa13e6238919a8b5f23ab4323755cdecd245"
+    },
+    {
+      "relative_path": "scripts/check_release_package.py",
+      "size_bytes": 2320,
+      "sha256": "c64ff859245cbad8e719b7a2137fb8e0ea8ddf14c73a9ac36773326b8ad5a80b"
+    },
+    {
+      "relative_path": "scripts/reviewer_imputation_policies_v3.py",
+      "size_bytes": 47167,
+      "sha256": "64a519f8eccc1b88fdfe9dc85a50b810a36b4536dc561e4b2adbf00d2db4d048"
+    },
+    {
+      "relative_path": "scripts/run_final_focal_pipeline.py",
+      "size_bytes": 29709,
+      "sha256": "8653727a3cbad928d50c523d817581097d214eb0e8fb2e9cd02a86a6e49ef908"
+    },
+    {
+      "relative_path": "supplementary_for_owner_review/APPROVAL_REQUIRED.md",
+      "size_bytes": 389,
+      "sha256": "b7d00dd59f6fcb9391c58275fbf45c263fa643294287aa486f98db32a3ed4042"
+    },
+    {
+      "relative_path": "supplementary_for_owner_review/S1_45_predictor_definitions.csv",
+      "size_bytes": 3809,
+      "sha256": "b4998212297b17d9b87b22700e86f62c5f99b82e595a51eff239ef61e0c27329"
+    },
+    {
+      "relative_path": "tests/test_v3_nested.py",
+      "size_bytes": 2642,
+      "sha256": "a8f4112a67013d3297c2c2051aecfe5d3330cf962b9685b844d63d4f58daab09"
+    }
+  ]
+}

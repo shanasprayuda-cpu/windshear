@@ -1,0 +1,5 @@
+Variant,Parameters,Mean AUPRC ± SD,Full leads
+Conv1D–BiLSTM (full),"41,994",0.3298 ± 0.0262,--
+BiLSTM-only,"41,734",0.2944 ± 0.0262,4/5
+Conv1D-only,"42,061",0.0627 ± 0.0254,5/5
+Conv1D–Transformer,"42,122",0.3011 ± 0.0263,4/5

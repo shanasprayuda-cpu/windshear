@@ -1,0 +1,4 @@
+Feature set,Predictors,Parameters,AUPRC,CSI,FAR
+F1: wind vectors,20,"183,434",0.421,0.307,0.554
+F2: F1 + shear gradients,37,"186,698",0.360,0.284,0.605
+F3: F2 + divergence,45,"188,234",0.380,0.292,0.587

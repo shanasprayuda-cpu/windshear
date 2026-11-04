@@ -1,0 +1,88 @@
+{
+  "architecture_selection": {
+    "dataset": "development 2023-2024",
+    "folds": 5,
+    "architectures": [
+      "TCN",
+      "BiLSTM",
+      "Transformer",
+      "TCN-BiLSTM",
+      "TCN-Transformer"
+    ],
+    "tuning": "Optuna 30 trials per architecture; weighted BCE; early stopping; seed 2026",
+    "ranking_mean_AUPRC": {
+      "TCN-BiLSTM": 0.5332,
+      "TCN-Transformer": 0.5188,
+      "Transformer": 0.4833,
+      "BiLSTM": 0.4704,
+      "TCN": 0.1139
+    }
+  },
+  "feature_comparison": {
+    "dataset": "development pooled OOF",
+    "F1": 20,
+    "F2": 37,
+    "F3": 45,
+    "model_different_from_final": true,
+    "architecture_fixed_except_input_channels": true
+  },
+  "final_focal": {
+    "dataset": "development 2023-2024 plus temporal external evaluation 2025",
+    "OOF_folds": 5,
+    "checkpoint": "epoch 50",
+    "external_prior_exploratory_inspection": true
+  },
+  "component_multi_seed": {
+    "variants": [
+      "Conv1D-BiLSTM full",
+      "BiLSTM-only",
+      "Conv1D-only",
+      "Conv1D-Transformer"
+    ],
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "folds": 5,
+    "fits": 100,
+    "epochs_each": 50,
+    "training_protocol": "fixed focal loss",
+    "do_not_compare_directly_with_architecture_selection": true
+  },
+  "imputation_nested_V3": {
+    "policy_minutes": [
+      0,
+      2,
+      5
+    ],
+    "method": "Only restrict previously filled Stage-A runs; do not rerun raw 10-second preprocessing",
+    "dev_valid_windows": {
+      "0": 841919,
+      "2": 846118,
+      "5": 847513
+    },
+    "external_valid_windows": {
+      "0": 68488,
+      "2": 70369,
+      "5": 70810
+    },
+    "matched_common_anchors": 68488,
+    "policy_specific_development_OOF_thresholds": true,
+    "full_fits": 3,
+    "dev_fold_fits": 15
+  },
+  "bootstrap": {
+    "method": "paired moving calendar blocks",
+    "block_hours": [
+      24,
+      48,
+      72
+    ],
+    "replicates": 500,
+    "comparator": "prior weighted-BCE checkpoint",
+    "external_result_interpretation": "exploratory, not confirmatory"
+  }
+}

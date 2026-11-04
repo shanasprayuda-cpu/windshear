@@ -128,13 +128,7 @@ Y_PATH = DATA_ROOT / "stageD1_data" / "F1" / "y.npy"
 STAGEC_ROOT = DATA_ROOT / "stageC"
 DEV_MANIFEST_PATH = STAGEC_ROOT / "manifest" / "development_windows.csv"
 FOLD_MEMBERSHIP_PATH = STAGEC_ROOT / "manifest" / "fold_membership.csv"
-ENGINE_ROOT = Path(__file__).resolve().parents[1]
-
-EXTERNAL_DATA_PATH = (
-    ENGINE_ROOT
-    / "stageD1_data"
-    / "F1_external"
-)
+EXTERNAL_DATA_PATH = DATA_ROOT / "stageD1_data" / "F1_external"
 EXTERNAL_MANIFEST_PATH = STAGEC_ROOT / "manifest" / "external_test_windows.csv"
 
 RESULT_ROOT = PROJECT_ROOT / "results"
@@ -247,67 +241,15 @@ def load_folds(sorted_anchors: np.ndarray, row_order: np.ndarray) -> Dict[int, D
     if missing:
         raise RuntimeError(f"fold_membership.csv missing columns: {sorted(missing)}")
     out = {}
-
     for fold in sorted(df["fold"].astype(int).unique()):
         sub = df[df["fold"].astype(int) == fold]
-
-        split_role = (
-            sub["split_role"]
-            .astype(str)
-            .str.strip()
-            .str.lower()
-        )
-
-        train_anchor = sub.loc[
-            split_role.eq("train"),
-            "anchor_idx"
-        ].to_numpy(dtype=np.int64)
-
-        val_anchor = sub.loc[
-            split_role.isin(["val", "validation"]),
-            "anchor_idx"
-        ].to_numpy(dtype=np.int64)
-
-        train_rows = anchors_to_rows(
-            train_anchor,
-            sorted_anchors,
-            row_order
-        )
-
-        val_rows = anchors_to_rows(
-            val_anchor,
-            sorted_anchors,
-            row_order
-        )
-
-        if len(train_rows) == 0:
-            raise RuntimeError(
-                f"Fold {fold}: training rows are empty."
-            )
-
-        if len(val_rows) == 0:
-            raise RuntimeError(
-                f"Fold {fold}: validation rows are empty. "
-                f"Available split_role values: "
-                f"{sorted(split_role.unique().tolist())}"
-            )
-
-        print(
-            f"Fold {fold}: "
-            f"train={len(train_rows):7d} "
-            f"val={len(val_rows):7d}"
-        )
-
-        out[int(fold)] = {
-            "train_rows": train_rows,
-            "val_rows": val_rows
-        }
-
+        train_anchor = sub.loc[sub["split_role"].eq("train"), "anchor_idx"].to_numpy(dtype=np.int64)
+        val_anchor = sub.loc[sub["split_role"].eq("val"), "anchor_idx"].to_numpy(dtype=np.int64)
+        train_rows = anchors_to_rows(train_anchor, sorted_anchors, row_order)
+        val_rows = anchors_to_rows(val_anchor, sorted_anchors, row_order)
+        out[int(fold)] = {"train_rows": train_rows, "val_rows": val_rows}
     if len(out) != 5:
-        raise RuntimeError(
-            f"Expected 5 folds, found {len(out)}."
-        )
-
+        raise RuntimeError(f"Expected 5 folds, found {len(out)}.")
     return out
 
 # -----------------------------------------------------------------------------

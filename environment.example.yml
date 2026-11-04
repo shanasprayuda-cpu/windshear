@@ -1,0 +1,13 @@
+# Example only; not the environment used to obtain paper results.
+# Install a PyTorch build compatible with your installed CUDA/driver separately.
+name: windshear_repro_example
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - optuna
+  # Install PyTorch for the target CPU/GPU using the official instructions.
